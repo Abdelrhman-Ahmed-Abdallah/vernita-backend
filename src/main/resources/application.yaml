@@ -1,0 +1,37 @@
+
+spring:
+  application:
+    name: vernita
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/vernita}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:AaA01156544419}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:abdelrahman1359157@gmail.com}
+    password: ${MAIL_PASSWORD:jwkx mqrg vqbn xltv}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET:sm0X8MoEW45vCWKNgPBWdqJkR3Z5Hk1Vn5GqIEKzTi0}
+  expiration: 900000

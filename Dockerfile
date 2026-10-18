@@ -2,7 +2,7 @@ FROM maven:3.9-eclipse-temurin-25 AS build
 
 WORKDIR /app
 
-COPY . .
+COPY target/generated-sources/annotations .
 
 RUN chmod +x mvnw
 RUN ./mvnw -DskipTests package
